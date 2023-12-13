@@ -1,4 +1,8 @@
 <h1> Minhas Listas </h1>
 
-
-<%= %>
+<% if @list.any %>
+  <% @lists.each do |list| %>
+    item
+  <% end %>
+<% end %>
+Sem listas registradas
