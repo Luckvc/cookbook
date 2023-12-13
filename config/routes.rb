@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  
+  get 'my_lists', to: 'users#my_lists'
+  
   root "home#index"
   resources :recipe_types, only: %i[new create index show]
   resources :recipes, only: %i[new create edit update show]
+  
 
   namespace :api do
     namespace :v1 do
